@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head class="col-md-12">
+    <meta charset="utf-8" />
+    <title>Exemplo Formulário Netlify</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/animate.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+
+
+    <main class="bg-gradiente d-flex flex-wrap col-md-12" id="contato">
+      <div class="col-md-6">
+        <form
+          action="/success"
+          method="post"
+          netlify
+          class="form-contato"
+          name="contato"
+        >
+          <input
+            type="text"
+            name="subject"
+            value="Mensagem enviada pelo site"
+            hidden
+          />
+
+          <div class="form-group">
+            <label for="nome">Nome</label>
+            <input
+              type="text"
+              class="form-control"
+              id="nome"
+              placeholder="Digite seu nome"
+              name="nome"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="email">E-mail</label>
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              placeholder="Digite seu melhor email"
+              required
+              name="email"
+            />
+          </div>
+          <div class="form-group">
+            <label for="assunto">Assunto</label>
+            <input
+              type="text"
+              class="form-control"
+              id="assunto"
+              placeholder="Assunto"
+              required
+              name="assunto"
+            />
+          </div>
+          <div class="form-group">
+            <label for="mensagem">Mensagem</label>
+            <textarea
+              type="text"
+              class="form-control"
+              id="mensagem"
+              placeholder="Escreva sua mensagem"
+              required
+              name="mensagem"
+              rows="5"
+              cols="33"
+            ></textarea>
+          </div>
+          <div class="o-btn-form">
+            <button type="submit" class="btn btn-primary col-md-3">
+              Enviar
+            </button>
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.js"></script>
+  </body>
+</html>
